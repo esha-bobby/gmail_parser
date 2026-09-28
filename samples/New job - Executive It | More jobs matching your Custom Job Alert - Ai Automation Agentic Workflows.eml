@@ -1,0 +1,2453 @@
+Delivered-To: eshabobby11@gmail.com
+Received: by 2002:a05:6022:72cd:20b0:10f:40fb:cbe6 with SMTP id k13-n2csp2363357las;
+        Sun, 27 Sep 2026 07:11:07 -0700 (PDT)
+X-Received: by 2002:a05:6a21:3301:b0:3dd:a197:cf2a with SMTP id adf61e73a8af0-3de0e9211e2mr10768835637.78.1790518267555;
+        Sun, 27 Sep 2026 07:11:07 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1790518267; cv=none;
+        d=google.com; s=arc-20260327;
+        b=LVdb7+S5bFBHpdH02TBwlY1HLDPeYgfo6LTXjARPHCOMucXRWaeBf00gxoykGmCTlk
+         7/rA7s2izmgF+IDOlacw8uwGJPjd4VhMtMjTcYugbZUAVxVD8aibUyMUke3Ounw3PcGn
+         KcW0SJx9ZSPLi6Qk/7OcyfyeyFBOiCUpD++pfW33bgv4UT5SUu9YlV+FxrrDi8y4SA9H
+         1o86LZ+Mam7O/UCg/cpV1ntpZZ4PkX8rtvty0RHItyZd/OUa0rVJRUE/aLmJsUnWrmct
+         PWu5w9NGP/ucmm1uKRs8ifwit+TFTU3dyXcpdVAX8azOtk1nkbb84qSzfuTCbuPr8RlU
+         tyHg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=unique-id:feedback-id:accept:format:charset:mime-version:subject:to
+         :from:date:dkim-signature:dkim-filter:message-id;
+        bh=hk97ShHG+lF3xUUC5J9dLL9R6EyP2dfQjk6HVgCSf8c=;
+        fh=+LttayKmuLo3vnVrd1lzHgHU30eY6GGrrZw0rk81jyE=;
+        b=WqBlb+MUdJvgFqqvGRVa8qcR8hA7WICnxb4nH7GfHP8CoWpmN/6pWP7PaOmzXXcOgW
+         kdBT7r6G3vNopndf5yU7kpZ1ptDX8wio4N7G28ZxzuTHSykJIK1qDaaFn70WQvxANHOw
+         /QpducGPHjTkbdjUTh0VgSDlNpG9tdfiS9cJXxST0y0f42oiVn96nSrVQ9SRzpz9r81f
+         OWsBBNcH4aZdIrdR01AjR5uWhm54MY9R8bh9Hhrvjgw608vqaLWaTSgan0riJnIn2Lbj
+         vEsheHiHYWFTPpIpcsBjWNek1kPdkFu9+pdoGfaB6VA3IYyLJ4LfokAbVKdgI6+rBpFS
+         WZsQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@naukri.com header.s=default_postfix_prod header.b=SEl5iHb0;
+       spf=pass (google.com: domain of naukrialerts@naukri.com designates 103.214.115.125 as permitted sender) smtp.mailfrom=naukrialerts@naukri.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=naukri.com
+Return-Path: <naukrialerts@naukri.com>
+Received: from nmail-one03-two14-one15-one25.naukri.com (nmail-one03-two14-one15-one25.naukri.com. [103.214.115.125])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-cc78780689fsi12346390a12.251.2026.09.27.07.11.06
+        for <eshabobby11@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sun, 27 Sep 2026 07:11:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of naukrialerts@naukri.com designates 103.214.115.125 as permitted sender) client-ip=103.214.115.125;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@naukri.com header.s=default_postfix_prod header.b=SEl5iHb0;
+       spf=pass (google.com: domain of naukrialerts@naukri.com designates 103.214.115.125 as permitted sender) smtp.mailfrom=naukrialerts@naukri.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=naukri.com
+Message-ID: <6ab923fb.7da48998.38818.afa2SMTPIN_ADDED_MISSING@mx.google.com>
+Received: from ni-central-communication-prod-service-consumer-apply-5bcb57pwrs (n9plrnk8wapl09.ieil.net [172.10.221.195])
+	by n5plrnmail01.ieil.net (Postfix) with ESMTP id 3C1C95A8E89
+	for <eshabobby11@gmail.com>; Sun, 27 Sep 2026 19:40:07 +0530 (IST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 n5plrnmail01.ieil.net 3C1C95A8E89
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=naukri.com;
+	s=default_postfix_prod; t=1790518208;
+	bh=hk97ShHG+lF3xUUC5J9dLL9R6EyP2dfQjk6HVgCSf8c=;
+	h=Date:From:To:Subject:From;
+	b=SEl5iHb0bHvAe5pOzfVT6i4CpzZmjelAXXrlmLGM2R1dDOnm7Xpdpfx481B1vxvv6
+	 6xSNwM+qfsL51GcwfItP4u/ECJL/nfFD2U0uzgmAQPZxNfH1Of2GULeS3lQzBU+zDG
+	 Be1Z0dp76HcT3vPZbd/YiGZUaMsWnCtTCNmNf3nFjwwHRgB2RG3V1oyiNo2x+8LCrN
+	 qZ0VS+/csCM4rX9qNa8nA3ZgTnJgvkYmB1L53n99UNo+UhN0nK9HgUNzNIEK98HM0m
+	 ktIjvf1jugXJTksJ4dlryB/EORKF0DFSikl7sDNbbEQjeYsq7TZLyfbkeBx5MMzaQX
+	 +C5SDuoUBHl4Q==
+Date: Sun, 27 Sep 2026 19:40:07 +0530 (IST)
+From: Naukri Alerts <naukrialerts@naukri.com>
+To: Esha Bobby <eshabobby11@gmail.com>
+Subject: New job - Executive It | More jobs matching your Custom Job Alert -
+ Ai Automation Agentic Workflows
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_1230532_771716930.1790518207969"
+CharSet: UTF-8
+format: flowed
+accept: application/json
+feedback-id: job_alerts_cja:infoedge
+unique-id: 127|x|6ab911321e5a71ce4de2cbd0|x|6ab911324d0f10b94cb151e2|x||x|1
+
+------=_Part_1230532_771716930.1790518207969
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1230533_752348079.1790518207969"
+
+------=_Part_1230533_752348079.1790518207969
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Job recommendations based on your Naukri.com profile
+
+------=_Part_1230533_752348079.1790518207969
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+<meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type">
+<meta content=3D"width=3Ddevice-width, initial-scale=3D1.0, maximum-scale=
+=3D1.0, user-scalable=3Dno" name=3D"viewport">
+<link href=3D"https://fonts.googleapis.com/css2?family=3DRoboto:ital,wght@0=
+,400;0,500;0,700;0,900;1,300&amp;display=3Dswap" rel=3D"stylesheet">
+<style type=3D"text/css">@media only screen and (max-width:479px){.wrapper{=
+width:98%!important}.Feedback_Widget{font-size:15px!important;line-height:2=
+0px!important}.footer-text{font-size:15px!important;line-height:20px!import=
+ant}.Profile_Widget{font-size:20px!important;line-height:24px!important}}</=
+style>
+</head>
+<body>
+<div style=3D"font-size:0.1px"> <img src=3D"https://logs.naukri.com/collect=
+orapi/v1/uba/bulk?data=3D%5B%7B%22widgetSequence%22%3A1%2C%22deviceType%22%=
+3A%22WEB%22%2C%22eventId%22%3A%226ab911321e5a71ce4de2cbd0gxzzqv%22%2C%22sys=
+temId%22%3A%22ni%22%2C%22widgetName%22%3A%5B%22get-app-button-mail-parent-w=
+dgt%22%5D%2C%22widgetVersion%22%3A%22v0%22%2C%22otherFields%22%3A%7B%22chil=
+dPage%22%3A%22ni-mail-ja-bpo-v0%22%7D%2C%22userId%22%3A%22293827342%22%2C%2=
+2pageName%22%3A%22ni-mail-ja-v1%22%2C%22sectionName%22%3A%22header-get-app-=
+button%22%2C%22actionType%22%3A%22view%22%2C%22encUsername%22%3A%2252c639b9=
+36f581699d0492e879dba5ff115e5e55e4c115d5d2cacb12860ec09292d2d6ac5f21f68f%22=
+%2C%22mailerId%22%3A%2220260927920%22%2C%22appId%22%3A%22127%22%2C%22tenant=
+Id%22%3A1%2C%22eventName%22%3A%22nonSessionizedWidgetView%22%2C%22lang%22%3=
+A%22en%22%2C%22actionSrc%22%3A%22inventorySystem%22%7D%2C%7B%22widgetSequen=
+ce%22%3A1%2C%22deviceType%22%3A%22WEB%22%2C%22eventId%22%3A%226ab911321e5a7=
+1ce4de2cbd0gxzzqv%22%2C%22systemId%22%3A%22ni%22%2C%22widgetName%22%3A%5B%2=
+2job-relevancy-feedback-mail-parent-wdgt%22%5D%2C%22widgetVersion%22%3A%22v=
+0%22%2C%22otherFields%22%3A%7B%22childPage%22%3A%22ni-mail-ja-bpo-v0%22%7D%=
+2C%22userId%22%3A%22293827342%22%2C%22pageName%22%3A%22ni-mail-ja-v1%22%2C%=
+22sectionName%22%3A%22job-relevancy%22%2C%22actionType%22%3A%22view%22%2C%2=
+2encUsername%22%3A%2252c639b936f581699d0492e879dba5ff115e5e55e4c115d5d2cacb=
+12860ec09292d2d6ac5f21f68f%22%2C%22mailerId%22%3A%2220260927920%22%2C%22app=
+Id%22%3A%22127%22%2C%22tenantId%22%3A1%2C%22eventName%22%3A%22nonSessionize=
+dWidgetView%22%2C%22lang%22%3A%22en%22%2C%22actionSrc%22%3A%22inventorySyst=
+em%22%7D%2C%7B%22widgetSequence%22%3A1%2C%22deviceType%22%3A%22WEB%22%2C%22=
+eventId%22%3A%226ab911321e5a71ce4de2cbd0gxzzqv%22%2C%22systemId%22%3A%22ni%=
+22%2C%22widgetName%22%3A%5B%22install-app-qr-mail-parent-wdgt%22%5D%2C%22wi=
+dgetVersion%22%3A%22v0%22%2C%22otherFields%22%3A%7B%22childPage%22%3A%22ni-=
+mail-ja-bpo-v0%22%7D%2C%22userId%22%3A%22293827342%22%2C%22pageName%22%3A%2=
+2ni-mail-ja-v1%22%2C%22sectionName%22%3A%22install-app%22%2C%22actionType%2=
+2%3A%22view%22%2C%22encUsername%22%3A%2252c639b936f581699d0492e879dba5ff115=
+e5e55e4c115d5d2cacb12860ec09292d2d6ac5f21f68f%22%2C%22mailerId%22%3A%222026=
+0927920%22%2C%22appId%22%3A%22127%22%2C%22tenantId%22%3A1%2C%22eventName%22=
+%3A%22nonSessionizedWidgetView%22%2C%22lang%22%3A%22en%22%2C%22actionSrc%22=
+%3A%22inventorySystem%22%7D%2C%7B%22deviceType%22%3A%22WEB%22%2C%22addition=
+alParams%22%3A%7B%7D%2C%22campaignId%22%3Anull%2C%22communicationId%22%3A%2=
+26ab911324d0f10b94cb151e2%22%2C%22communicationType%22%3A%22mail%22%2C%22te=
+mplateId%22%3A%22127416%22%2C%22journeyId%22%3Anull%2C%22encRecipientId%22%=
+3A%221789%3AcZwarq3z88rOyQep1vQri1NalZyB%2Bec2i%5C%2FDAFvE%2BvZoVyM%5C%2FXz=
+Q%3D%3D%22%2C%22userId%22%3A%22293827342%22%2C%22eventCode%22%3A%22job_aler=
+ts_cja%22%2C%22encEmail%22%3A%2252c639b936f581699d0492e879dba5ff115e5e55e4c=
+115d5d2cacb12860ec09292d2d6ac5f21f68f%22%2C%22mailType%22%3A%22job_alerts_c=
+ja%22%2C%22recipientType%22%3A%22jobseeker%22%2C%22mailerId%22%3A%222026092=
+7920%22%2C%22provider%22%3A%22EmailSmtpProviderCcsBulk%22%2C%22requestId%22=
+%3A%226ab911321e5a71ce4de2cbd0%22%2C%22appId%22%3A%22127%22%2C%22segmentId%=
+22%3Anull%2C%22tenantId%22%3A%221%22%2C%22eventName%22%3A%22communicationOp=
+en%22%2C%22parentActivityId%22%3Anull%2C%22initTime%22%3A1790513458525%2C%2=
+2parentJourneyId%22%3Anull%7D%5D" height=3D"0.1px" width=3D"0.1px"> </div>
+
+
+<p style=3D"display:none">Executive IT</p>
+<table align=3D"center" bgcolor=3D"#eff2f7" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" height=3D"100%" style=3D"border-collapse:collapse;mso-tab=
+le-lspace:0;mso-table-rspace:0" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" height=3D"20" valign=3D"top"> </td>
+</tr>
+<tr>
+<td align=3D"center" valign=3D"top" width=3D"600">
+<table bgcolor=3D"#ffffff" align=3D"center" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" style=3D"max-width:600px;border-collapse:collapse;mso-tab=
+le-lspace:0;mso-table-rspace:0;border:1px solid #f0f1f6">
+<tbody>
+<tr>
+<td align=3D"center" bgcolor=3D"#FFFFFF" style=3D"max-width:600px" valign=
+=3D"top" width=3D"600">
+<div></div><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rsp=
+ace:0" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" bgcolor=3D"#f7f8fa" valign=3D"top">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0" widt=
+h=3D"95%">
+<tbody>
+<tr>
+<td height=3D"18" valign=3D"top"> </td>
+</tr>
+<tr>
+<td valign=3D"bottom">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0" width=
+=3D"105">
+<tbody>
+<tr>
+<td height=3D"20"> <a href=3D"https://www.naukri.com/?utm_campaign=3Dcja_ma=
+iler&amp;utm_medium=3Demail&amp;utm_content=3Djob_alerts_cja&amp;utm_term=
+=3D20260927920" target=3D"_blank" style=3D"font-size:13px;text-align:left;c=
+olor:#006ab9;text-decoration:none"><img src=3D"https://static.naukimg.com/s=
+/0/0/i/new-logos/naukri.png" alt=3D"naukri.com" style=3D"font-family:'Robot=
+o',Arial;font-size:13px;text-align:left;color:#006ab9" width=3D"100"></a> <=
+/td>
+</tr>
+</tbody>
+</table>
+</td>
+<td align=3D"right"><div><table align=3D"right" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0" bgcolor=3D"#FF7555" style=3D"border-radius:100px;">
+  <tbody><tr>
+
+<td width=3D"10"></td><td height=3D"28" align=3D"center"><a href=3D"https:/=
+/cm.naukri.com?data=3D%7B%22widgetSequence%22%3A1%2C%22deviceType%22%3A%22W=
+EB%22%2C%22eventId%22%3A%226ab911321e5a71ce4de2cbd0gxzzqv%22%2C%22systemId%=
+22%3A%22ni%22%2C%22widgetName%22%3A%22get-app-button-mail-parent-wdgt%22%2C=
+%22widgetVersion%22%3A%22v0%22%2C%22label%22%3A%22get-app-button-html%22%2C=
+%22otherFields%22%3A%7B%22childPage%22%3A%22ni-mail-ja-bpo-v0%22%7D%2C%22us=
+erId%22%3A%22293827342%22%2C%22pageName%22%3A%22ni-mail-ja-v1%22%2C%22secti=
+onName%22%3A%22header-get-app-button%22%2C%22actionType%22%3A%22click%22%2C=
+%22encUsername%22%3A%2252c639b936f581699d0492e879dba5ff115e5e55e4c115d5d2ca=
+cb12860ec09292d2d6ac5f21f68f%22%2C%22mailerId%22%3A%2220260927920%22%2C%22a=
+ppId%22%3A%22127%22%2C%22tenantId%22%3A1%2C%22eventName%22%3A%22nonSessioni=
+zedWidgetClick%22%2C%22widgetNameString%22%3A%22get-app-button-mail-parent-=
+wdgt%22%2C%22lang%22%3A%22en%22%2C%22actionSrc%22%3A%22inventorySystem%22%7=
+D&amp;redirect=3Dhttps%3A%2F%2Fwww.naukri.com%2Fdurl%2FnEZb" data-label=3D"=
+get-app-button-html" target=3D"_blank" style=3D" font-family: 'Roboto',Helv=
+etica,sans-serif; font-size: 13px; line-height: 28px; text-decoration:none;=
+ color:#ffffff; display:block;">Get App</a></td><td width=3D"5"></td><td va=
+lign=3D"middle" align=3D"left"><img src=3D"https://www.ieplads.com/mailers/=
+2023_ui/naukri/16jan/images/arrow.png" style=3D"vertical-align: bottom;" al=
+ign=3D"absmiddle" width=3D"13"></td><td width=3D"10"></td>
+
+
+
+  </tr>
+
+
+
+ </tbody></table></div></td>
+</tr>
+<tr>
+<td height=3D"15" valign=3D"top"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top">
+<table width=3D"95%" align=3D"center" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td height=3D"28"></td>
+</tr>
+<tr>
+<td align=3D"center" valign=3D"top">
+<table border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td width=3D"400" class=3D"Profile_Widget" align=3D"center" style=3D"font-f=
+amily:'Roboto Slab',Arial,Helvetica,sans-serif;font-size:23px;text-align:ce=
+nter;color:#1b2437;font-weight:700;line-height:30px">
+ Jobs matching your job alert Ai Automation Agentic Workflows  </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"14"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"center">
+<table width=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0" cells=
+pacing=3D"0">
+<tbody>
+<tr>
+<td width=3D"400" valign=3D"top" align=3D"center">
+<div></div><table style=3D"max-width:400px" width=3D"90%" border=3D"0" alig=
+n=3D"center" cellpadding=3D"0" cellspacing=3D"0"><tbody><tr>
+<td valign=3D"top" align=3D"center"> <a href=3D"https://www.naukri.com/jd/j=
+ob-listings-executive-it-sterling-tools-stl-faridabad-0-to-1-years-23092601=
+2175?xp=3D1&amp;src=3Dcja20260927920&amp;xid=3D20260927920^gm^293827342&amp=
+;uid=3D293827342&amp;alertId=3D&amp;utm_campaign=3Dcja_mailer&amp;utm_mediu=
+m=3Demail&amp;utm_source=3Djoblink&amp;utm_content=3Djob_alerts_cja&amp;utm=
+_term=3D20260927920" target=3D"_blank" style=3D"text-decoration:none;z-inde=
+x:5">
+<table border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td width=3D"400" valign=3D"top" align=3D"center">
+<table width=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"border:1px solid #eaf1f5;border-radius:10px 6px">
+<tbody>
+<tr>
+<td width=3D"18"> </td>
+<td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+<tr>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" width=3D"40">
+<table width=3D"40" border=3D"0" align=3D"left" cellpadding=3D"0" cellspaci=
+ng=3D"0">
+<tbody>
+<tr><td width=3D"40" height=3D"38" style=3D"border:1px solid #eaf1f5;border=
+-radius:4px;font-family:'Inter',Arial,Helvetica,sans-serif;font-size:26px;t=
+ext-align:center;color:#7ddbf9;font-weight:600;text-transform:uppercase;lin=
+e-height:18px" align=3D"center"> <img src=3D"https://img.naukimg.com/logo_i=
+mages/groups/v1/2015630.gif" style=3D"vertical-align:middle" alt=3D"" width=
+=3D"40" height=3D"38"> </td></tr>
+
+</tbody>
+</table>
+</td>
+<td width=3D"10"> </td>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:15px;text-align:left;color:#0A44C7;font-weight:600;line-height:20=
+px"> <a href=3D"https://www.naukri.com/jd/job-listings-executive-it-sterlin=
+g-tools-stl-faridabad-0-to-1-years-230926012175?xp=3D1&amp;src=3Dcja2026092=
+7920&amp;xid=3D20260927920^gm^293827342&amp;uid=3D293827342&amp;alertId=3D&=
+amp;utm_campaign=3Dcja_mailer&amp;utm_medium=3Demail&amp;utm_source=3Djobli=
+nk&amp;utm_content=3Djob_alerts_cja&amp;utm_term=3D20260927920" style=3D"te=
+xt-decoration:none;z-index:5;font-family:'Inter',Arial,Helvetica,sans-serif=
+;font-size:15px;text-align:left;color:#0A44C7;font-weight:600;line-height:2=
+0px" target=3D"_blank">Executive IT</a> </td>
+</tr>
+<tr>
+<td height=3D"2"> </td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left">
+<table border=3D"0" align=3D"left" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:13px;text-align:left;color:#1b2437;font-weight:400;line-height:18=
+px">Sterling Tools (STL)</td>
+<td width=3D"7"> </td><td height=3D"18" align=3D"left" width=3D"17"><a href=
+=3D"https://www.ambitionbox.com/reviews/sterling-tools-reviews?utm_campaign=
+=3Dcja_mailer&amp;utm_source=3Dnaukri&amp;utm_medium=3Demail&amp;utm_conten=
+t=3Djob_alerts_cja&amp;utm_term=3D20260927920" style=3D"text-decoration:non=
+e;z-index:5;color:#8292B4" target=3D"_blank"><img src=3D"https://www.ieplad=
+s.com/mailers/2023_ui/naukri/16jan/images/u_star.png" align=3D"absmiddle" w=
+idth=3D"12" alt=3D""></a></td>
+<td align=3D"left"><a href=3D"https://www.ambitionbox.com/reviews/sterling-=
+tools-reviews?utm_campaign=3Dcja_mailer&amp;utm_source=3Dnaukri&amp;utm_med=
+ium=3Demail&amp;utm_content=3Djob_alerts_cja&amp;utm_term=3D20260927920" st=
+yle=3D"text-decoration:none;font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:11px;line-height:19px;text-align:left;color:#8292b4;font-weight:4=
+00">
+4.4
+</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left"><table cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td width=3D"16" valign=3D"middle" align=3D"left"> <img src=3D"https://www.=
+ieplads.com/mailers/2022_ui/naukri/revival-6dec/images/location-icon.png" a=
+lign=3D"left" alt=3D"" width=3D"12"> </td>
+<td>
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" alig=
+n=3D"left">
+<tbody>
+<tr>
+<td class=3D"cart_subheading" style=3D"font-family:'Roboto',Arial,Helvetica=
+,sans-serif;font-size:13px;line-height:18px;text-align:left;color:#445578;f=
+ont-weight:400" valign=3D"middle" align=3D"left">Faridabad</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"7"> </td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+<tr>
+<td valign=3D"top" height=3D"7"> </td>
+</tr>
+<tr>
+<td valign=3D"top">
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"18"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</a> </td>
+</tr>
+<tr>
+<td height=3D"20"></td>
+</tr><tr>
+<td valign=3D"top" align=3D"center"> <a href=3D"https://www.naukri.com/jd/j=
+ob-listings-artificial-intelligence-developer-ashok-magnetics-limited-chenn=
+ai-0-to-2-years-190926017290?xp=3D2&amp;src=3Dcja20260927920&amp;xid=3D2026=
+0927920^gm^293827342&amp;uid=3D293827342&amp;alertId=3D&amp;utm_campaign=3D=
+cja_mailer&amp;utm_medium=3Demail&amp;utm_source=3Djoblink&amp;utm_content=
+=3Djob_alerts_cja&amp;utm_term=3D20260927920" target=3D"_blank" style=3D"te=
+xt-decoration:none;z-index:5">
+<table border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td width=3D"400" valign=3D"top" align=3D"center">
+<table width=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"border:1px solid #eaf1f5;border-radius:10px 6px">
+<tbody>
+<tr>
+<td width=3D"18"> </td>
+<td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+<tr>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" width=3D"40">
+<table width=3D"40" border=3D"0" align=3D"left" cellpadding=3D"0" cellspaci=
+ng=3D"0">
+<tbody>
+<tr><td width=3D"40" height=3D"38" style=3D"border:1px solid #eaf1f5;border=
+-radius:4px;font-family:'Inter',Arial,Helvetica,sans-serif;font-size:26px;t=
+ext-align:center;color:#7ddbf9;font-weight:600;text-transform:uppercase;lin=
+e-height:18px" align=3D"center"> <img src=3D"https://img.naukimg.com/logo_i=
+mages/groups/v1/3598086.gif" style=3D"vertical-align:middle" alt=3D"" width=
+=3D"40" height=3D"38"> </td></tr>
+
+</tbody>
+</table>
+</td>
+<td width=3D"10"> </td>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:15px;text-align:left;color:#0A44C7;font-weight:600;line-height:20=
+px"> <a href=3D"https://www.naukri.com/jd/job-listings-artificial-intellige=
+nce-developer-ashok-magnetics-limited-chennai-0-to-2-years-190926017290?xp=
+=3D2&amp;src=3Dcja20260927920&amp;xid=3D20260927920^gm^293827342&amp;uid=3D=
+293827342&amp;alertId=3D&amp;utm_campaign=3Dcja_mailer&amp;utm_medium=3Dema=
+il&amp;utm_source=3Djoblink&amp;utm_content=3Djob_alerts_cja&amp;utm_term=
+=3D20260927920" style=3D"text-decoration:none;z-index:5;font-family:'Inter'=
+,Arial,Helvetica,sans-serif;font-size:15px;text-align:left;color:#0A44C7;fo=
+nt-weight:600;line-height:20px" target=3D"_blank">Artificial Intelligence D=
+eveloper</a> </td>
+</tr>
+<tr>
+<td height=3D"2"> </td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left">
+<table border=3D"0" align=3D"left" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:13px;text-align:left;color:#1b2437;font-weight:400;line-height:18=
+px">Ashok Magnetics Limited</td>
+<td width=3D"7"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left"><table cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td width=3D"16" valign=3D"middle" align=3D"left"> <img src=3D"https://www.=
+ieplads.com/mailers/2022_ui/naukri/revival-6dec/images/location-icon.png" a=
+lign=3D"left" alt=3D"" width=3D"12"> </td>
+<td>
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" alig=
+n=3D"left">
+<tbody>
+<tr>
+<td class=3D"cart_subheading" style=3D"font-family:'Roboto',Arial,Helvetica=
+,sans-serif;font-size:13px;line-height:18px;text-align:left;color:#445578;f=
+ont-weight:400" valign=3D"middle" align=3D"left">Chennai</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"7"> </td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+<tr>
+<td valign=3D"top" height=3D"7"> </td>
+</tr>
+<tr>
+<td valign=3D"top">
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"18"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</a> </td>
+</tr>
+<tr>
+<td height=3D"20"></td>
+</tr><tr>
+<td valign=3D"top" align=3D"center"> <a href=3D"https://www.naukri.com/jd/j=
+ob-listings-required-java-python-ai-and-app-developer-chennai-z-tech-soluti=
+ons-chennai-0-to-1-years-250826018449?xp=3D3&amp;src=3Dcja20260927920&amp;x=
+id=3D20260927920^gm^293827342&amp;uid=3D293827342&amp;alertId=3D&amp;utm_ca=
+mpaign=3Dcja_mailer&amp;utm_medium=3Demail&amp;utm_source=3Djoblink&amp;utm=
+_content=3Djob_alerts_cja&amp;utm_term=3D20260927920" target=3D"_blank" sty=
+le=3D"text-decoration:none;z-index:5">
+<table border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td width=3D"400" valign=3D"top" align=3D"center">
+<table width=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"border:1px solid #eaf1f5;border-radius:10px 6px">
+<tbody>
+<tr>
+<td width=3D"18"> </td>
+<td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+<tr>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" width=3D"40">
+<table width=3D"40" border=3D"0" align=3D"left" cellpadding=3D"0" cellspaci=
+ng=3D"0">
+<tbody>
+<tr><td width=3D"40" height=3D"38" style=3D"border:1px solid #eaf1f5;border=
+-radius:4px;font-family:'Inter',Arial,Helvetica,sans-serif;font-size:26px;t=
+ext-align:center;color:#7ddbf9;font-weight:600;text-transform:uppercase;lin=
+e-height:18px" align=3D"center"> <img src=3D"https://img.naukimg.com/logo_i=
+mages/groups/v1/11481742.gif" style=3D"vertical-align:middle" alt=3D"" widt=
+h=3D"40" height=3D"38"> </td></tr>
+
+</tbody>
+</table>
+</td>
+<td width=3D"10"> </td>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:15px;text-align:left;color:#0A44C7;font-weight:600;line-height:20=
+px"> <a href=3D"https://www.naukri.com/jd/job-listings-required-java-python=
+-ai-and-app-developer-chennai-z-tech-solutions-chennai-0-to-1-years-2508260=
+18449?xp=3D3&amp;src=3Dcja20260927920&amp;xid=3D20260927920^gm^293827342&am=
+p;uid=3D293827342&amp;alertId=3D&amp;utm_campaign=3Dcja_mailer&amp;utm_medi=
+um=3Demail&amp;utm_source=3Djoblink&amp;utm_content=3Djob_alerts_cja&amp;ut=
+m_term=3D20260927920" style=3D"text-decoration:none;z-index:5;font-family:'=
+Inter',Arial,Helvetica,sans-serif;font-size:15px;text-align:left;color:#0A4=
+4C7;font-weight:600;line-height:20px" target=3D"_blank">Required Java, Pyth=
+on, AI and App developer- Chennai</a> </td>
+</tr>
+<tr>
+<td height=3D"2"> </td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left">
+<table border=3D"0" align=3D"left" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:13px;text-align:left;color:#1b2437;font-weight:400;line-height:18=
+px">Z Tech Solutions</td>
+<td width=3D"7"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left"><table cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td width=3D"16" valign=3D"middle" align=3D"left"> <img src=3D"https://www.=
+ieplads.com/mailers/2022_ui/naukri/revival-6dec/images/location-icon.png" a=
+lign=3D"left" alt=3D"" width=3D"12"> </td>
+<td>
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" alig=
+n=3D"left">
+<tbody>
+<tr>
+<td class=3D"cart_subheading" style=3D"font-family:'Roboto',Arial,Helvetica=
+,sans-serif;font-size:13px;line-height:18px;text-align:left;color:#445578;f=
+ont-weight:400" valign=3D"middle" align=3D"left">Chennai</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"7"> </td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+<tr>
+<td valign=3D"top" height=3D"7"> </td>
+</tr>
+<tr>
+<td valign=3D"top">
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"18"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</a> </td>
+</tr>
+<tr>
+<td height=3D"20"></td>
+</tr><tr>
+<td valign=3D"top" align=3D"center">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody><tr>
+<td bgcolor=3D"#F7F8FF" style=3D"border:1px solid #eaf1f5;border-radius:10p=
+x 6px">
+<table width=3D"95%" border=3D"0" align=3D"center" cellpadding=3D"0" cellsp=
+acing=3D"0">
+<tbody><tr>
+<td valign=3D"top" align=3D"center" height=3D"18"></td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"center">
+<table border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0">
+<tbody><tr>
+<td valign=3D"middle" height=3D"26" align=3D"left" style=3D"font-family:'In=
+ter',Arial,Helvetica,sans-serif;font-size:15px;text-align:left;color:#1b243=
+7;font-weight:700;line-height:20px;white-space:nowrap">
+Are these jobs relevant?</td>
+<td width=3D"10"></td>
+<td width=3D"45" height=3D"26" valign=3D"middle" align=3D"center" style=3D"=
+border-radius:100px;border:1px solid #d3e1ea;text-decoration:none"><a targe=
+t=3D"_blank" data-label=3D"feedback" href=3D"https://cm.naukri.com?data=3D%=
+7B%22widgetSequence%22%3A1%2C%22deviceType%22%3A%22WEB%22%2C%22eventId%22%3=
+A%226ab911321e5a71ce4de2cbd0gxzzqv%22%2C%22systemId%22%3A%22ni%22%2C%22widg=
+etName%22%3A%22job-relevancy-feedback-mail-parent-wdgt%22%2C%22widgetVersio=
+n%22%3A%22v0%22%2C%22label%22%3A%22feedback%22%2C%22otherFields%22%3A%7B%22=
+childPage%22%3A%22ni-mail-ja-bpo-v0%22%7D%2C%22userId%22%3A%22293827342%22%=
+2C%22pageName%22%3A%22ni-mail-ja-v1%22%2C%22sectionName%22%3A%22job-relevan=
+cy%22%2C%22actionType%22%3A%22click%22%2C%22encUsername%22%3A%2252c639b936f=
+581699d0492e879dba5ff115e5e55e4c115d5d2cacb12860ec09292d2d6ac5f21f68f%22%2C=
+%22mailerId%22%3A%2220260927920%22%2C%22appId%22%3A%22127%22%2C%22tenantId%=
+22%3A1%2C%22eventName%22%3A%22nonSessionizedWidgetClick%22%2C%22widgetNameS=
+tring%22%3A%22job-relevancy-feedback-mail-parent-wdgt%22%2C%22lang%22%3A%22=
+en%22%2C%22actionSrc%22%3A%22inventorySystem%22%7D&amp;redirect=3Dhttps%3A%=
+2F%2Fwww.naukri.com%2Fmnjuser%2Frecommendedjobs%3Fun%3D52c639b936f581699d04=
+92e879dba5ff115e5e55e4c115d5d2cacb12860ec09292d2d6ac5f21f68f%26response%3Dy=
+es%26mid%3D20260927920%26utm_campaign%3Djob_alerts_cja%26utm_medium%3Demail=
+%26utm_source%3Dyesrelevant" style=3D"font-family:'Inter',Arial,Helvetica,s=
+ans-serif;font-size:11px;text-align:center;color:#445578;line-height:26px;d=
+isplay:block;font-weight:400;text-decoration:none;cursor:pointer">Yes</a>
+</td>
+<td width=3D"6"></td>
+<td width=3D"41" height=3D"26" valign=3D"middle" align=3D"center" style=3D"=
+border-radius:100px;border:1px solid #d3e1ea;text-decoration:none"><a targe=
+t=3D"_blank" data-label=3D"feedback" href=3D"https://cm.naukri.com?data=3D%=
+7B%22widgetSequence%22%3A1%2C%22deviceType%22%3A%22WEB%22%2C%22eventId%22%3=
+A%226ab911321e5a71ce4de2cbd0gxzzqv%22%2C%22systemId%22%3A%22ni%22%2C%22widg=
+etName%22%3A%22job-relevancy-feedback-mail-parent-wdgt%22%2C%22widgetVersio=
+n%22%3A%22v0%22%2C%22label%22%3A%22feedback%22%2C%22otherFields%22%3A%7B%22=
+childPage%22%3A%22ni-mail-ja-bpo-v0%22%7D%2C%22userId%22%3A%22293827342%22%=
+2C%22pageName%22%3A%22ni-mail-ja-v1%22%2C%22sectionName%22%3A%22job-relevan=
+cy%22%2C%22actionType%22%3A%22click%22%2C%22encUsername%22%3A%2252c639b936f=
+581699d0492e879dba5ff115e5e55e4c115d5d2cacb12860ec09292d2d6ac5f21f68f%22%2C=
+%22mailerId%22%3A%2220260927920%22%2C%22appId%22%3A%22127%22%2C%22tenantId%=
+22%3A1%2C%22eventName%22%3A%22nonSessionizedWidgetClick%22%2C%22widgetNameS=
+tring%22%3A%22job-relevancy-feedback-mail-parent-wdgt%22%2C%22lang%22%3A%22=
+en%22%2C%22actionSrc%22%3A%22inventorySystem%22%7D&amp;redirect=3Dhttps%3A%=
+2F%2Fwww.naukri.com%2Falert%2Ffeedback%3Fun%3D52c639b936f581699d0492e879dba=
+5ff115e5e55e4c115d5d2cacb12860ec09292d2d6ac5f21f68f%26response%3Dno%26mid%3=
+D20260927920%26utm_campaign%3Djob_alerts_cja%26utm_medium%3Demail%26utm_sou=
+rce%3Dnorelevant" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;f=
+ont-size:11px;text-align:center;color:#445578;line-height:26px;display:bloc=
+k;font-weight:400;text-decoration:none;cursor:pointer">No</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td height=3D"18"></td>
+</tr>
+</tbody></table>
+</td>
+<td width=3D"6"></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td height=3D"20"></td>
+</tr><tr>
+<td valign=3D"top" align=3D"center"> <a href=3D"https://www.naukri.com/jd/j=
+ob-listings-ai-engineer-ecordon-solutions-noida-sector-63-0-to-1-years-2109=
+26908293?xp=3D4&amp;src=3Dcja20260927920&amp;xid=3D20260927920^gm^293827342=
+&amp;uid=3D293827342&amp;alertId=3D&amp;utm_campaign=3Dcja_mailer&amp;utm_m=
+edium=3Demail&amp;utm_source=3Djoblink&amp;utm_content=3Djob_alerts_cja&amp=
+;utm_term=3D20260927920" target=3D"_blank" style=3D"text-decoration:none;z-=
+index:5">
+<table border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td width=3D"400" valign=3D"top" align=3D"center">
+<table width=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"border:1px solid #eaf1f5;border-radius:10px 6px">
+<tbody>
+<tr>
+<td width=3D"18"> </td>
+<td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+<tr>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" width=3D"40">
+<table width=3D"40" border=3D"0" align=3D"left" cellpadding=3D"0" cellspaci=
+ng=3D"0">
+<tbody>
+<tr><td width=3D"40" height=3D"38" style=3D"border:1px solid #eaf1f5;border=
+-radius:4px;font-family:'Inter',Arial,Helvetica,sans-serif;font-size:26px;t=
+ext-align:center;color:#7ddbf9;font-weight:600;text-transform:uppercase;lin=
+e-height:18px" align=3D"center"> <img src=3D"https://img.naukimg.com/logo_i=
+mages/groups/v1/300890.gif" style=3D"vertical-align:middle" alt=3D"" width=
+=3D"40" height=3D"38"> </td></tr>
+
+</tbody>
+</table>
+</td>
+<td width=3D"10"> </td>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:15px;text-align:left;color:#0A44C7;font-weight:600;line-height:20=
+px"> <a href=3D"https://www.naukri.com/jd/job-listings-ai-engineer-ecordon-=
+solutions-noida-sector-63-0-to-1-years-210926908293?xp=3D4&amp;src=3Dcja202=
+60927920&amp;xid=3D20260927920^gm^293827342&amp;uid=3D293827342&amp;alertId=
+=3D&amp;utm_campaign=3Dcja_mailer&amp;utm_medium=3Demail&amp;utm_source=3Dj=
+oblink&amp;utm_content=3Djob_alerts_cja&amp;utm_term=3D20260927920" style=
+=3D"text-decoration:none;z-index:5;font-family:'Inter',Arial,Helvetica,sans=
+-serif;font-size:15px;text-align:left;color:#0A44C7;font-weight:600;line-he=
+ight:20px" target=3D"_blank">AI Engineer</a> </td>
+</tr>
+<tr>
+<td height=3D"2"> </td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left">
+<table border=3D"0" align=3D"left" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:13px;text-align:left;color:#1b2437;font-weight:400;line-height:18=
+px">Ecordon Solutions</td>
+<td width=3D"7"> </td><td height=3D"18" align=3D"left" width=3D"17"><a href=
+=3D"https://www.ambitionbox.com/reviews/ecordon-solutions-reviews?utm_campa=
+ign=3Dcja_mailer&amp;utm_source=3Dnaukri&amp;utm_medium=3Demail&amp;utm_con=
+tent=3Djob_alerts_cja&amp;utm_term=3D20260927920" style=3D"text-decoration:=
+none;z-index:5;color:#8292B4" target=3D"_blank"><img src=3D"https://www.iep=
+lads.com/mailers/2023_ui/naukri/16jan/images/u_star.png" align=3D"absmiddle=
+" width=3D"12" alt=3D""></a></td>
+<td align=3D"left"><a href=3D"https://www.ambitionbox.com/reviews/ecordon-s=
+olutions-reviews?utm_campaign=3Dcja_mailer&amp;utm_source=3Dnaukri&amp;utm_=
+medium=3Demail&amp;utm_content=3Djob_alerts_cja&amp;utm_term=3D20260927920"=
+ style=3D"text-decoration:none;font-family:'Inter',Arial,Helvetica,sans-ser=
+if;font-size:11px;line-height:19px;text-align:left;color:#8292b4;font-weigh=
+t:400">
+5.0
+</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left"><table cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td width=3D"16" valign=3D"middle" align=3D"left"> <img src=3D"https://www.=
+ieplads.com/mailers/2022_ui/naukri/revival-6dec/images/location-icon.png" a=
+lign=3D"left" alt=3D"" width=3D"12"> </td>
+<td>
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" alig=
+n=3D"left">
+<tbody>
+<tr>
+<td class=3D"cart_subheading" style=3D"font-family:'Roboto',Arial,Helvetica=
+,sans-serif;font-size:13px;line-height:18px;text-align:left;color:#445578;f=
+ont-weight:400" valign=3D"middle" align=3D"left">Noida, Sector 63</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"7"> </td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+<tr>
+<td valign=3D"top" height=3D"7"> </td>
+</tr>
+<tr>
+<td valign=3D"top">
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"18"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</a> </td>
+</tr>
+<tr>
+<td height=3D"20"></td>
+</tr><tr>
+<td valign=3D"top" align=3D"center"> <a href=3D"https://www.naukri.com/jd/j=
+ob-listings-gen-ai-video-creator-intern-fan-tv-ai-noida-0-to-4-years-210926=
+908307?xp=3D5&amp;src=3Dcja20260927920&amp;xid=3D20260927920^gm^293827342&a=
+mp;uid=3D293827342&amp;alertId=3D&amp;utm_campaign=3Dcja_mailer&amp;utm_med=
+ium=3Demail&amp;utm_source=3Djoblink&amp;utm_content=3Djob_alerts_cja&amp;u=
+tm_term=3D20260927920" target=3D"_blank" style=3D"text-decoration:none;z-in=
+dex:5">
+<table border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td width=3D"400" valign=3D"top" align=3D"center">
+<table width=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"border:1px solid #eaf1f5;border-radius:10px 6px">
+<tbody>
+<tr>
+<td width=3D"18"> </td>
+<td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+<tr>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" width=3D"40">
+<table width=3D"40" border=3D"0" align=3D"left" cellpadding=3D"0" cellspaci=
+ng=3D"0">
+<tbody>
+<tr><td width=3D"40" height=3D"38" style=3D"border:1px solid #eaf1f5;border=
+-radius:4px;font-family:'Inter',Arial,Helvetica,sans-serif;font-size:26px;t=
+ext-align:center;color:#7ddbf9;font-weight:600;text-transform:uppercase;lin=
+e-height:18px" align=3D"center"> <img src=3D"https://img.naukimg.com/logo_i=
+mages/groups/v1/11751931.gif" style=3D"vertical-align:middle" alt=3D"" widt=
+h=3D"40" height=3D"38"> </td></tr>
+
+</tbody>
+</table>
+</td>
+<td width=3D"10"> </td>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:15px;text-align:left;color:#0A44C7;font-weight:600;line-height:20=
+px"> <a href=3D"https://www.naukri.com/jd/job-listings-gen-ai-video-creator=
+-intern-fan-tv-ai-noida-0-to-4-years-210926908307?xp=3D5&amp;src=3Dcja20260=
+927920&amp;xid=3D20260927920^gm^293827342&amp;uid=3D293827342&amp;alertId=
+=3D&amp;utm_campaign=3Dcja_mailer&amp;utm_medium=3Demail&amp;utm_source=3Dj=
+oblink&amp;utm_content=3Djob_alerts_cja&amp;utm_term=3D20260927920" style=
+=3D"text-decoration:none;z-index:5;font-family:'Inter',Arial,Helvetica,sans=
+-serif;font-size:15px;text-align:left;color:#0A44C7;font-weight:600;line-he=
+ight:20px" target=3D"_blank">Gen AI video creator Intern</a> </td>
+</tr>
+<tr>
+<td height=3D"2"> </td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left">
+<table border=3D"0" align=3D"left" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:13px;text-align:left;color:#1b2437;font-weight:400;line-height:18=
+px">Fan Tv Ai</td>
+<td width=3D"7"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left"><table cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td width=3D"16" valign=3D"middle" align=3D"left"> <img src=3D"https://www.=
+ieplads.com/mailers/2022_ui/naukri/revival-6dec/images/location-icon.png" a=
+lign=3D"left" alt=3D"" width=3D"12"> </td>
+<td>
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" alig=
+n=3D"left">
+<tbody>
+<tr>
+<td class=3D"cart_subheading" style=3D"font-family:'Roboto',Arial,Helvetica=
+,sans-serif;font-size:13px;line-height:18px;text-align:left;color:#445578;f=
+ont-weight:400" valign=3D"middle" align=3D"left">Hybrid - Noida</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"7"> </td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+<tr>
+<td valign=3D"top" height=3D"7"> </td>
+</tr>
+<tr>
+<td valign=3D"top">
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"18"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</a> </td>
+</tr>
+<tr>
+<td height=3D"20"></td>
+</tr><tr>
+<td valign=3D"top" align=3D"center"> <a href=3D"https://www.naukri.com/jd/j=
+ob-listings-data-scientist-generative-ai-llm-rag-agentic-ai-tvs-credit-serv=
+ices-ltd-bengaluru-0-to-2-years-050826008794?xp=3D6&amp;src=3Dcja2026092792=
+0&amp;xid=3D20260927920^gm^293827342&amp;uid=3D293827342&amp;alertId=3D&amp=
+;utm_campaign=3Dcja_mailer&amp;utm_medium=3Demail&amp;utm_source=3Djoblink&=
+amp;utm_content=3Djob_alerts_cja&amp;utm_term=3D20260927920" target=3D"_bla=
+nk" style=3D"text-decoration:none;z-index:5">
+<table border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td width=3D"400" valign=3D"top" align=3D"center">
+<table width=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"border:1px solid #eaf1f5;border-radius:10px 6px">
+<tbody>
+<tr>
+<td width=3D"18"> </td>
+<td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+<tr>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" width=3D"40">
+<table width=3D"40" border=3D"0" align=3D"left" cellpadding=3D"0" cellspaci=
+ng=3D"0">
+<tbody>
+<tr><td width=3D"40" height=3D"38" style=3D"border:1px solid #eaf1f5;border=
+-radius:4px;font-family:'Inter',Arial,Helvetica,sans-serif;font-size:26px;t=
+ext-align:center;color:#7ddbf9;font-weight:600;text-transform:uppercase;lin=
+e-height:18px" align=3D"center"> <img src=3D"https://img.naukimg.com/logo_i=
+mages/groups/v1/4633393.gif" style=3D"vertical-align:middle" alt=3D"" width=
+=3D"40" height=3D"38"> </td></tr>
+
+</tbody>
+</table>
+</td>
+<td width=3D"10"> </td>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:15px;text-align:left;color:#0A44C7;font-weight:600;line-height:20=
+px"> <a href=3D"https://www.naukri.com/jd/job-listings-data-scientist-gener=
+ative-ai-llm-rag-agentic-ai-tvs-credit-services-ltd-bengaluru-0-to-2-years-=
+050826008794?xp=3D6&amp;src=3Dcja20260927920&amp;xid=3D20260927920^gm^29382=
+7342&amp;uid=3D293827342&amp;alertId=3D&amp;utm_campaign=3Dcja_mailer&amp;u=
+tm_medium=3Demail&amp;utm_source=3Djoblink&amp;utm_content=3Djob_alerts_cja=
+&amp;utm_term=3D20260927920" style=3D"text-decoration:none;z-index:5;font-f=
+amily:'Inter',Arial,Helvetica,sans-serif;font-size:15px;text-align:left;col=
+or:#0A44C7;font-weight:600;line-height:20px" target=3D"_blank">Data Scienti=
+st - Generative AI (LLM | RAG | Agentic AI)</a> </td>
+</tr>
+<tr>
+<td height=3D"2"> </td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left">
+<table border=3D"0" align=3D"left" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:13px;text-align:left;color:#1b2437;font-weight:400;line-height:18=
+px">TVS Credit Services Ltd</td>
+<td width=3D"7"> </td><td height=3D"18" align=3D"left" width=3D"17"><a href=
+=3D"https://www.ambitionbox.com/reviews/tvs-credit-services-ltd-reviews?utm=
+_campaign=3Dcja_mailer&amp;utm_source=3Dnaukri&amp;utm_medium=3Demail&amp;u=
+tm_content=3Djob_alerts_cja&amp;utm_term=3D20260927920" style=3D"text-decor=
+ation:none;z-index:5;color:#8292B4" target=3D"_blank"><img src=3D"https://w=
+ww.ieplads.com/mailers/2023_ui/naukri/16jan/images/u_star.png" align=3D"abs=
+middle" width=3D"12" alt=3D""></a></td>
+<td align=3D"left"><a href=3D"https://www.ambitionbox.com/reviews/tvs-credi=
+t-services-ltd-reviews?utm_campaign=3Dcja_mailer&amp;utm_source=3Dnaukri&am=
+p;utm_medium=3Demail&amp;utm_content=3Djob_alerts_cja&amp;utm_term=3D202609=
+27920" style=3D"text-decoration:none;font-family:'Inter',Arial,Helvetica,sa=
+ns-serif;font-size:11px;line-height:19px;text-align:left;color:#8292b4;font=
+-weight:400">
+4.1
+</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left"><table cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td width=3D"16" valign=3D"middle" align=3D"left"> <img src=3D"https://www.=
+ieplads.com/mailers/2022_ui/naukri/revival-6dec/images/location-icon.png" a=
+lign=3D"left" alt=3D"" width=3D"12"> </td>
+<td>
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" alig=
+n=3D"left">
+<tbody>
+<tr>
+<td class=3D"cart_subheading" style=3D"font-family:'Roboto',Arial,Helvetica=
+,sans-serif;font-size:13px;line-height:18px;text-align:left;color:#445578;f=
+ont-weight:400" valign=3D"middle" align=3D"left">Bengaluru</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"7"> </td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+<tr>
+<td valign=3D"top" height=3D"7"> </td>
+</tr>
+<tr>
+<td valign=3D"top">
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"18"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</a> </td>
+</tr>
+<tr>
+<td height=3D"20"></td>
+</tr><tr>
+<td valign=3D"top" align=3D"center"> <a href=3D"https://www.naukri.com/jd/j=
+ob-listings-executive-n-systems-development-python-asian-paints-mumbai-all-=
+areas-0-to-2-years-250926021212?xp=3D7&amp;src=3Dcja20260927920&amp;xid=3D2=
+0260927920^gm^293827342&amp;uid=3D293827342&amp;alertId=3D&amp;utm_campaign=
+=3Dcja_mailer&amp;utm_medium=3Demail&amp;utm_source=3Djoblink&amp;utm_conte=
+nt=3Djob_alerts_cja&amp;utm_term=3D20260927920" target=3D"_blank" style=3D"=
+text-decoration:none;z-index:5">
+<table border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td width=3D"400" valign=3D"top" align=3D"center">
+<table width=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"border:1px solid #eaf1f5;border-radius:10px 6px">
+<tbody>
+<tr>
+<td width=3D"18"> </td>
+<td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+<tr>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" width=3D"40">
+<table width=3D"40" border=3D"0" align=3D"left" cellpadding=3D"0" cellspaci=
+ng=3D"0">
+<tbody>
+<tr><td width=3D"40" height=3D"38" style=3D"border:1px solid #eaf1f5;border=
+-radius:4px;font-family:'Inter',Arial,Helvetica,sans-serif;font-size:26px;t=
+ext-align:center;color:#7ddbf9;font-weight:600;text-transform:uppercase;lin=
+e-height:18px" align=3D"center"> <img src=3D"https://img.naukimg.com/logo_i=
+mages/groups/v1/218202.gif" style=3D"vertical-align:middle" alt=3D"" width=
+=3D"40" height=3D"38"> </td></tr>
+
+</tbody>
+</table>
+</td>
+<td width=3D"10"> </td>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:15px;text-align:left;color:#0A44C7;font-weight:600;line-height:20=
+px"> <a href=3D"https://www.naukri.com/jd/job-listings-executive-n-systems-=
+development-python-asian-paints-mumbai-all-areas-0-to-2-years-250926021212?=
+xp=3D7&amp;src=3Dcja20260927920&amp;xid=3D20260927920^gm^293827342&amp;uid=
+=3D293827342&amp;alertId=3D&amp;utm_campaign=3Dcja_mailer&amp;utm_medium=3D=
+email&amp;utm_source=3Djoblink&amp;utm_content=3Djob_alerts_cja&amp;utm_ter=
+m=3D20260927920" style=3D"text-decoration:none;z-index:5;font-family:'Inter=
+',Arial,Helvetica,sans-serif;font-size:15px;text-align:left;color:#0A44C7;f=
+ont-weight:600;line-height:20px" target=3D"_blank">Executive N - Systems De=
+velopment - Python</a> </td>
+</tr>
+<tr>
+<td height=3D"2"> </td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left">
+<table border=3D"0" align=3D"left" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:13px;text-align:left;color:#1b2437;font-weight:400;line-height:18=
+px">Asian Paints</td>
+<td width=3D"7"> </td><td height=3D"18" align=3D"left" width=3D"17"><a href=
+=3D"https://www.ambitionbox.com/reviews/asian-paints-reviews?utm_campaign=
+=3Dcja_mailer&amp;utm_source=3Dnaukri&amp;utm_medium=3Demail&amp;utm_conten=
+t=3Djob_alerts_cja&amp;utm_term=3D20260927920" style=3D"text-decoration:non=
+e;z-index:5;color:#8292B4" target=3D"_blank"><img src=3D"https://www.ieplad=
+s.com/mailers/2023_ui/naukri/16jan/images/u_star.png" align=3D"absmiddle" w=
+idth=3D"12" alt=3D""></a></td>
+<td align=3D"left"><a href=3D"https://www.ambitionbox.com/reviews/asian-pai=
+nts-reviews?utm_campaign=3Dcja_mailer&amp;utm_source=3Dnaukri&amp;utm_mediu=
+m=3Demail&amp;utm_content=3Djob_alerts_cja&amp;utm_term=3D20260927920" styl=
+e=3D"text-decoration:none;font-family:'Inter',Arial,Helvetica,sans-serif;fo=
+nt-size:11px;line-height:19px;text-align:left;color:#8292b4;font-weight:400=
+">
+3.9
+</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left"><table cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td width=3D"16" valign=3D"middle" align=3D"left"> <img src=3D"https://www.=
+ieplads.com/mailers/2022_ui/naukri/revival-6dec/images/location-icon.png" a=
+lign=3D"left" alt=3D"" width=3D"12"> </td>
+<td>
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" alig=
+n=3D"left">
+<tbody>
+<tr>
+<td class=3D"cart_subheading" style=3D"font-family:'Roboto',Arial,Helvetica=
+,sans-serif;font-size:13px;line-height:18px;text-align:left;color:#445578;f=
+ont-weight:400" valign=3D"middle" align=3D"left">Mumbai (All Areas...</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"7"> </td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+<tr>
+<td valign=3D"top" height=3D"7"> </td>
+</tr>
+<tr>
+<td valign=3D"top">
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"18"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</a> </td>
+</tr>
+<tr>
+<td height=3D"20"></td>
+</tr><tr>
+<td valign=3D"top" align=3D"center"> <a href=3D"https://www.naukri.com/jd/j=
+ob-listings-generative-agentic-ai-trainer-novelvista-learning-solutions-pun=
+e-0-to-5-years-260826020142?xp=3D8&amp;src=3Dcja20260927920&amp;xid=3D20260=
+927920^gm^293827342&amp;uid=3D293827342&amp;alertId=3D&amp;utm_campaign=3Dc=
+ja_mailer&amp;utm_medium=3Demail&amp;utm_source=3Djoblink&amp;utm_content=
+=3Djob_alerts_cja&amp;utm_term=3D20260927920" target=3D"_blank" style=3D"te=
+xt-decoration:none;z-index:5">
+<table border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td width=3D"400" valign=3D"top" align=3D"center">
+<table width=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"border:1px solid #eaf1f5;border-radius:10px 6px">
+<tbody>
+<tr>
+<td width=3D"18"> </td>
+<td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+<tr>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" width=3D"40">
+<table width=3D"40" border=3D"0" align=3D"left" cellpadding=3D"0" cellspaci=
+ng=3D"0">
+<tbody>
+<tr><td width=3D"40" height=3D"38" style=3D"border:1px solid #eaf1f5;border=
+-radius:4px;font-family:'Inter',Arial,Helvetica,sans-serif;font-size:26px;t=
+ext-align:center;color:#7ddbf9;font-weight:600;text-transform:uppercase;lin=
+e-height:18px" align=3D"center"> <img src=3D"https://img.naukimg.com/logo_i=
+mages/groups/v1/1158722.gif" style=3D"vertical-align:middle" alt=3D"" width=
+=3D"40" height=3D"38"> </td></tr>
+
+</tbody>
+</table>
+</td>
+<td width=3D"10"> </td>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:15px;text-align:left;color:#0A44C7;font-weight:600;line-height:20=
+px"> <a href=3D"https://www.naukri.com/jd/job-listings-generative-agentic-a=
+i-trainer-novelvista-learning-solutions-pune-0-to-5-years-260826020142?xp=
+=3D8&amp;src=3Dcja20260927920&amp;xid=3D20260927920^gm^293827342&amp;uid=3D=
+293827342&amp;alertId=3D&amp;utm_campaign=3Dcja_mailer&amp;utm_medium=3Dema=
+il&amp;utm_source=3Djoblink&amp;utm_content=3Djob_alerts_cja&amp;utm_term=
+=3D20260927920" style=3D"text-decoration:none;z-index:5;font-family:'Inter'=
+,Arial,Helvetica,sans-serif;font-size:15px;text-align:left;color:#0A44C7;fo=
+nt-weight:600;line-height:20px" target=3D"_blank">Generative &amp; Agentic =
+AI - Trainer</a> </td>
+</tr>
+<tr>
+<td height=3D"2"> </td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left">
+<table border=3D"0" align=3D"left" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:13px;text-align:left;color:#1b2437;font-weight:400;line-height:18=
+px">Novelvista Learning...</td>
+<td width=3D"7"> </td><td height=3D"18" align=3D"left" width=3D"17"><a href=
+=3D"https://www.ambitionbox.com/reviews/novelvista-learning-solutions-pvt-d=
+ot-ltd-dot-reviews?utm_campaign=3Dcja_mailer&amp;utm_source=3Dnaukri&amp;ut=
+m_medium=3Demail&amp;utm_content=3Djob_alerts_cja&amp;utm_term=3D2026092792=
+0" style=3D"text-decoration:none;z-index:5;color:#8292B4" target=3D"_blank"=
+><img src=3D"https://www.ieplads.com/mailers/2023_ui/naukri/16jan/images/u_=
+star.png" align=3D"absmiddle" width=3D"12" alt=3D""></a></td>
+<td align=3D"left"><a href=3D"https://www.ambitionbox.com/reviews/novelvist=
+a-learning-solutions-pvt-dot-ltd-dot-reviews?utm_campaign=3Dcja_mailer&amp;=
+utm_source=3Dnaukri&amp;utm_medium=3Demail&amp;utm_content=3Djob_alerts_cja=
+&amp;utm_term=3D20260927920" style=3D"text-decoration:none;font-family:'Int=
+er',Arial,Helvetica,sans-serif;font-size:11px;line-height:19px;text-align:l=
+eft;color:#8292b4;font-weight:400">
+3.0
+</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left"><table cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td width=3D"16" valign=3D"middle" align=3D"left"> <img src=3D"https://www.=
+ieplads.com/mailers/2022_ui/naukri/revival-6dec/images/location-icon.png" a=
+lign=3D"left" alt=3D"" width=3D"12"> </td>
+<td>
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" alig=
+n=3D"left">
+<tbody>
+<tr>
+<td class=3D"cart_subheading" style=3D"font-family:'Roboto',Arial,Helvetica=
+,sans-serif;font-size:13px;line-height:18px;text-align:left;color:#445578;f=
+ont-weight:400" valign=3D"middle" align=3D"left">Pune(Baner +1)</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"7"> </td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+<tr>
+<td valign=3D"top" height=3D"7"> </td>
+</tr>
+<tr>
+<td valign=3D"top">
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"18"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</a> </td>
+</tr>
+<tr>
+<td height=3D"20"></td>
+</tr><tr>
+<td valign=3D"top" align=3D"center"> <a href=3D"https://www.naukri.com/jd/j=
+ob-listings-ai-ml-engineer-estontec-private-limited-bengaluru-0-to-3-years-=
+220926503547?xp=3D9&amp;src=3Dcja20260927920&amp;xid=3D20260927920^gm^29382=
+7342&amp;uid=3D293827342&amp;alertId=3D&amp;utm_campaign=3Dcja_mailer&amp;u=
+tm_medium=3Demail&amp;utm_source=3Djoblink&amp;utm_content=3Djob_alerts_cja=
+&amp;utm_term=3D20260927920" target=3D"_blank" style=3D"text-decoration:non=
+e;z-index:5">
+<table border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td width=3D"400" valign=3D"top" align=3D"center">
+<table width=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"border:1px solid #eaf1f5;border-radius:10px 6px">
+<tbody>
+<tr>
+<td width=3D"18"> </td>
+<td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+<tr>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" width=3D"40">
+<table width=3D"40" border=3D"0" align=3D"left" cellpadding=3D"0" cellspaci=
+ng=3D"0">
+<tbody>
+<tr><td width=3D"40" height=3D"38" style=3D"border:1px solid #eaf1f5;border=
+-radius:4px;font-family:'Inter',Arial,Helvetica,sans-serif;font-size:26px;t=
+ext-align:center;color:#7ddbf9;font-weight:600;text-transform:uppercase;lin=
+e-height:18px" align=3D"center"> <img src=3D"https://img.naukimg.com/logo_i=
+mages/groups/v1/4594231.gif" style=3D"vertical-align:middle" alt=3D"" width=
+=3D"40" height=3D"38"> </td></tr>
+
+</tbody>
+</table>
+</td>
+<td width=3D"10"> </td>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:15px;text-align:left;color:#0A44C7;font-weight:600;line-height:20=
+px"> <a href=3D"https://www.naukri.com/jd/job-listings-ai-ml-engineer-eston=
+tec-private-limited-bengaluru-0-to-3-years-220926503547?xp=3D9&amp;src=3Dcj=
+a20260927920&amp;xid=3D20260927920^gm^293827342&amp;uid=3D293827342&amp;ale=
+rtId=3D&amp;utm_campaign=3Dcja_mailer&amp;utm_medium=3Demail&amp;utm_source=
+=3Djoblink&amp;utm_content=3Djob_alerts_cja&amp;utm_term=3D20260927920" sty=
+le=3D"text-decoration:none;z-index:5;font-family:'Inter',Arial,Helvetica,sa=
+ns-serif;font-size:15px;text-align:left;color:#0A44C7;font-weight:600;line-=
+height:20px" target=3D"_blank">AI/ML Engineer</a> </td>
+</tr>
+<tr>
+<td height=3D"2"> </td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left">
+<table border=3D"0" align=3D"left" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:13px;text-align:left;color:#1b2437;font-weight:400;line-height:18=
+px">Estontec (opc)</td>
+<td width=3D"7"> </td><td height=3D"18" align=3D"left" width=3D"17"><a href=
+=3D"https://www.ambitionbox.com/reviews/estontec-opc-reviews?utm_campaign=
+=3Dcja_mailer&amp;utm_source=3Dnaukri&amp;utm_medium=3Demail&amp;utm_conten=
+t=3Djob_alerts_cja&amp;utm_term=3D20260927920" style=3D"text-decoration:non=
+e;z-index:5;color:#8292B4" target=3D"_blank"><img src=3D"https://www.ieplad=
+s.com/mailers/2023_ui/naukri/16jan/images/u_star.png" align=3D"absmiddle" w=
+idth=3D"12" alt=3D""></a></td>
+<td align=3D"left"><a href=3D"https://www.ambitionbox.com/reviews/estontec-=
+opc-reviews?utm_campaign=3Dcja_mailer&amp;utm_source=3Dnaukri&amp;utm_mediu=
+m=3Demail&amp;utm_content=3Djob_alerts_cja&amp;utm_term=3D20260927920" styl=
+e=3D"text-decoration:none;font-family:'Inter',Arial,Helvetica,sans-serif;fo=
+nt-size:11px;line-height:19px;text-align:left;color:#8292b4;font-weight:400=
+">
+2.9
+</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left"><table cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td width=3D"16" valign=3D"middle" align=3D"left"> <img src=3D"https://www.=
+ieplads.com/mailers/2022_ui/naukri/revival-6dec/images/location-icon.png" a=
+lign=3D"left" alt=3D"" width=3D"12"> </td>
+<td>
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" alig=
+n=3D"left">
+<tbody>
+<tr>
+<td class=3D"cart_subheading" style=3D"font-family:'Roboto',Arial,Helvetica=
+,sans-serif;font-size:13px;line-height:18px;text-align:left;color:#445578;f=
+ont-weight:400" valign=3D"middle" align=3D"left">Bengaluru</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"7"> </td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+<tr>
+<td valign=3D"top" height=3D"7"> </td>
+</tr>
+<tr>
+<td valign=3D"top">
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"18"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</a> </td>
+</tr>
+<tr>
+<td height=3D"20"></td>
+</tr><tr>
+<td valign=3D"top" align=3D"center"> <a href=3D"https://www.naukri.com/jd/j=
+ob-listings-ai-artist-hungama-mumbai-all-areas-0-to-5-years-220926028350?xp=
+=3D10&amp;src=3Dcja20260927920&amp;xid=3D20260927920^gm^293827342&amp;uid=
+=3D293827342&amp;alertId=3D&amp;utm_campaign=3Dcja_mailer&amp;utm_medium=3D=
+email&amp;utm_source=3Djoblink&amp;utm_content=3Djob_alerts_cja&amp;utm_ter=
+m=3D20260927920" target=3D"_blank" style=3D"text-decoration:none;z-index:5"=
+>
+<table border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td width=3D"400" valign=3D"top" align=3D"center">
+<table width=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"border:1px solid #eaf1f5;border-radius:10px 6px">
+<tbody>
+<tr>
+<td width=3D"18"> </td>
+<td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+<tr>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" width=3D"40">
+<table width=3D"40" border=3D"0" align=3D"left" cellpadding=3D"0" cellspaci=
+ng=3D"0">
+<tbody>
+<tr><td width=3D"40" height=3D"38" style=3D"border:1px solid #eaf1f5;border=
+-radius:4px;font-family:'Inter',Arial,Helvetica,sans-serif;font-size:26px;t=
+ext-align:center;color:#7ddbf9;font-weight:600;text-transform:uppercase;lin=
+e-height:18px" align=3D"center"> <img src=3D"https://img.naukimg.com/logo_i=
+mages/groups/v1/4539714.gif" style=3D"vertical-align:middle" alt=3D"" width=
+=3D"40" height=3D"38"> </td></tr>
+
+</tbody>
+</table>
+</td>
+<td width=3D"10"> </td>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:15px;text-align:left;color:#0A44C7;font-weight:600;line-height:20=
+px"> <a href=3D"https://www.naukri.com/jd/job-listings-ai-artist-hungama-mu=
+mbai-all-areas-0-to-5-years-220926028350?xp=3D10&amp;src=3Dcja20260927920&a=
+mp;xid=3D20260927920^gm^293827342&amp;uid=3D293827342&amp;alertId=3D&amp;ut=
+m_campaign=3Dcja_mailer&amp;utm_medium=3Demail&amp;utm_source=3Djoblink&amp=
+;utm_content=3Djob_alerts_cja&amp;utm_term=3D20260927920" style=3D"text-dec=
+oration:none;z-index:5;font-family:'Inter',Arial,Helvetica,sans-serif;font-=
+size:15px;text-align:left;color:#0A44C7;font-weight:600;line-height:20px" t=
+arget=3D"_blank">AI Artist</a> </td>
+</tr>
+<tr>
+<td height=3D"2"> </td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left">
+<table border=3D"0" align=3D"left" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:13px;text-align:left;color:#1b2437;font-weight:400;line-height:18=
+px">Hungama</td>
+<td width=3D"7"> </td><td height=3D"18" align=3D"left" width=3D"17"><a href=
+=3D"https://www.ambitionbox.com/reviews/hungama-reviews?utm_campaign=3Dcja_=
+mailer&amp;utm_source=3Dnaukri&amp;utm_medium=3Demail&amp;utm_content=3Djob=
+_alerts_cja&amp;utm_term=3D20260927920" style=3D"text-decoration:none;z-ind=
+ex:5;color:#8292B4" target=3D"_blank"><img src=3D"https://www.ieplads.com/m=
+ailers/2023_ui/naukri/16jan/images/u_star.png" align=3D"absmiddle" width=3D=
+"12" alt=3D""></a></td>
+<td align=3D"left"><a href=3D"https://www.ambitionbox.com/reviews/hungama-r=
+eviews?utm_campaign=3Dcja_mailer&amp;utm_source=3Dnaukri&amp;utm_medium=3De=
+mail&amp;utm_content=3Djob_alerts_cja&amp;utm_term=3D20260927920" style=3D"=
+text-decoration:none;font-family:'Inter',Arial,Helvetica,sans-serif;font-si=
+ze:11px;line-height:19px;text-align:left;color:#8292b4;font-weight:400">
+3.3
+</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left"><table cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td width=3D"16" valign=3D"middle" align=3D"left"> <img src=3D"https://www.=
+ieplads.com/mailers/2022_ui/naukri/revival-6dec/images/location-icon.png" a=
+lign=3D"left" alt=3D"" width=3D"12"> </td>
+<td>
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" alig=
+n=3D"left">
+<tbody>
+<tr>
+<td class=3D"cart_subheading" style=3D"font-family:'Roboto',Arial,Helvetica=
+,sans-serif;font-size:13px;line-height:18px;text-align:left;color:#445578;f=
+ont-weight:400" valign=3D"middle" align=3D"left">Mumbai (All Areas)</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"7"> </td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+<tr>
+<td valign=3D"top" height=3D"7"> </td>
+</tr>
+<tr>
+<td valign=3D"top">
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"18"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</a> </td>
+</tr>
+<tr>
+<td height=3D"20"></td>
+</tr><tr>
+<td valign=3D"top" align=3D"center"> <a href=3D"https://www.naukri.com/jd/j=
+ob-listings-digital-engineer-cadfem-engineering-services-india-pvt-ltd-hyde=
+rabad-0-to-2-years-240926504730?xp=3D11&amp;src=3Dcja20260927920&amp;xid=3D=
+20260927920^gm^293827342&amp;uid=3D293827342&amp;alertId=3D&amp;utm_campaig=
+n=3Dcja_mailer&amp;utm_medium=3Demail&amp;utm_source=3Djoblink&amp;utm_cont=
+ent=3Djob_alerts_cja&amp;utm_term=3D20260927920" target=3D"_blank" style=3D=
+"text-decoration:none;z-index:5">
+<table border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td width=3D"400" valign=3D"top" align=3D"center">
+<table width=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"border:1px solid #eaf1f5;border-radius:10px 6px">
+<tbody>
+<tr>
+<td width=3D"18"> </td>
+<td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+<tr>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" width=3D"40">
+<table width=3D"40" border=3D"0" align=3D"left" cellpadding=3D"0" cellspaci=
+ng=3D"0">
+<tbody>
+<tr><td width=3D"40" height=3D"38" style=3D"border:1px solid #eaf1f5;border=
+-radius:4px;font-family:'Inter',Arial,Helvetica,sans-serif;font-size:26px;t=
+ext-align:center;color:#7ddbf9;font-weight:600;text-transform:uppercase;lin=
+e-height:18px" align=3D"center"> <img src=3D"https://img.naukimg.com/logo_i=
+mages/groups/v1/4585365.gif" style=3D"vertical-align:middle" alt=3D"" width=
+=3D"40" height=3D"38"> </td></tr>
+
+</tbody>
+</table>
+</td>
+<td width=3D"10"> </td>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:15px;text-align:left;color:#0A44C7;font-weight:600;line-height:20=
+px"> <a href=3D"https://www.naukri.com/jd/job-listings-digital-engineer-cad=
+fem-engineering-services-india-pvt-ltd-hyderabad-0-to-2-years-240926504730?=
+xp=3D11&amp;src=3Dcja20260927920&amp;xid=3D20260927920^gm^293827342&amp;uid=
+=3D293827342&amp;alertId=3D&amp;utm_campaign=3Dcja_mailer&amp;utm_medium=3D=
+email&amp;utm_source=3Djoblink&amp;utm_content=3Djob_alerts_cja&amp;utm_ter=
+m=3D20260927920" style=3D"text-decoration:none;z-index:5;font-family:'Inter=
+',Arial,Helvetica,sans-serif;font-size:15px;text-align:left;color:#0A44C7;f=
+ont-weight:600;line-height:20px" target=3D"_blank">Digital Engineer</a> </t=
+d>
+</tr>
+<tr>
+<td height=3D"2"> </td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left">
+<table border=3D"0" align=3D"left" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:13px;text-align:left;color:#1b2437;font-weight:400;line-height:18=
+px">Cadfem Engineering ...</td>
+<td width=3D"7"> </td><td height=3D"18" align=3D"left" width=3D"17"><a href=
+=3D"https://www.ambitionbox.com/reviews/cadfem-india-private-limited-review=
+s?utm_campaign=3Dcja_mailer&amp;utm_source=3Dnaukri&amp;utm_medium=3Demail&=
+amp;utm_content=3Djob_alerts_cja&amp;utm_term=3D20260927920" style=3D"text-=
+decoration:none;z-index:5;color:#8292B4" target=3D"_blank"><img src=3D"http=
+s://www.ieplads.com/mailers/2023_ui/naukri/16jan/images/u_star.png" align=
+=3D"absmiddle" width=3D"12" alt=3D""></a></td>
+<td align=3D"left"><a href=3D"https://www.ambitionbox.com/reviews/cadfem-in=
+dia-private-limited-reviews?utm_campaign=3Dcja_mailer&amp;utm_source=3Dnauk=
+ri&amp;utm_medium=3Demail&amp;utm_content=3Djob_alerts_cja&amp;utm_term=3D2=
+0260927920" style=3D"text-decoration:none;font-family:'Inter',Arial,Helveti=
+ca,sans-serif;font-size:11px;line-height:19px;text-align:left;color:#8292b4=
+;font-weight:400">
+3.9
+</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left"><table cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td width=3D"16" valign=3D"middle" align=3D"left"> <img src=3D"https://www.=
+ieplads.com/mailers/2022_ui/naukri/revival-6dec/images/location-icon.png" a=
+lign=3D"left" alt=3D"" width=3D"12"> </td>
+<td>
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" alig=
+n=3D"left">
+<tbody>
+<tr>
+<td class=3D"cart_subheading" style=3D"font-family:'Roboto',Arial,Helvetica=
+,sans-serif;font-size:13px;line-height:18px;text-align:left;color:#445578;f=
+ont-weight:400" valign=3D"middle" align=3D"left">Hyderabad</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"7"> </td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+<tr>
+<td valign=3D"top" height=3D"7"> </td>
+</tr>
+<tr>
+<td valign=3D"top">
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"18"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</a> </td>
+</tr>
+<tr>
+<td height=3D"20"></td>
+</tr><tr>
+<td valign=3D"top" align=3D"center"> <a href=3D"https://www.naukri.com/jd/j=
+ob-listings-vessel-optimisation-analyst-alpha-ori-technologies-mumbai-chenn=
+ai-0-to-1-years-250926501537?xp=3D12&amp;src=3Dcja20260927920&amp;xid=3D202=
+60927920^gm^293827342&amp;uid=3D293827342&amp;alertId=3D&amp;utm_campaign=
+=3Dcja_mailer&amp;utm_medium=3Demail&amp;utm_source=3Djoblink&amp;utm_conte=
+nt=3Djob_alerts_cja&amp;utm_term=3D20260927920" target=3D"_blank" style=3D"=
+text-decoration:none;z-index:5">
+<table border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td width=3D"400" valign=3D"top" align=3D"center">
+<table width=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"border:1px solid #eaf1f5;border-radius:10px 6px">
+<tbody>
+<tr>
+<td width=3D"18"> </td>
+<td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+<tr>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" width=3D"40">
+<table width=3D"40" border=3D"0" align=3D"left" cellpadding=3D"0" cellspaci=
+ng=3D"0">
+<tbody>
+<tr><td width=3D"40" height=3D"38" style=3D"border:1px solid #eaf1f5;border=
+-radius:4px;font-family:'Inter',Arial,Helvetica,sans-serif;font-size:26px;t=
+ext-align:center;color:#7ddbf9;font-weight:600;text-transform:uppercase;lin=
+e-height:18px" align=3D"center"> <img src=3D"https://img.naukimg.com/logo_i=
+mages/groups/v1/8374091.gif" style=3D"vertical-align:middle" alt=3D"" width=
+=3D"40" height=3D"38"> </td></tr>
+
+</tbody>
+</table>
+</td>
+<td width=3D"10"> </td>
+<td>
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:15px;text-align:left;color:#0A44C7;font-weight:600;line-height:20=
+px"> <a href=3D"https://www.naukri.com/jd/job-listings-vessel-optimisation-=
+analyst-alpha-ori-technologies-mumbai-chennai-0-to-1-years-250926501537?xp=
+=3D12&amp;src=3Dcja20260927920&amp;xid=3D20260927920^gm^293827342&amp;uid=
+=3D293827342&amp;alertId=3D&amp;utm_campaign=3Dcja_mailer&amp;utm_medium=3D=
+email&amp;utm_source=3Djoblink&amp;utm_content=3Djob_alerts_cja&amp;utm_ter=
+m=3D20260927920" style=3D"text-decoration:none;z-index:5;font-family:'Inter=
+',Arial,Helvetica,sans-serif;font-size:15px;text-align:left;color:#0A44C7;f=
+ont-weight:600;line-height:20px" target=3D"_blank">Vessel Optimisation Anal=
+yst</a> </td>
+</tr>
+<tr>
+<td height=3D"2"> </td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left">
+<table border=3D"0" align=3D"left" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-family:'Inter',Arial,Helvetica,sans-serif;=
+font-size:13px;text-align:left;color:#1b2437;font-weight:400;line-height:18=
+px">Zeronorth</td>
+<td width=3D"7"> </td><td height=3D"18" align=3D"left" width=3D"17"><a href=
+=3D"https://www.ambitionbox.com/reviews/zeronorth-reviews?utm_campaign=3Dcj=
+a_mailer&amp;utm_source=3Dnaukri&amp;utm_medium=3Demail&amp;utm_content=3Dj=
+ob_alerts_cja&amp;utm_term=3D20260927920" style=3D"text-decoration:none;z-i=
+ndex:5;color:#8292B4" target=3D"_blank"><img src=3D"https://www.ieplads.com=
+/mailers/2023_ui/naukri/16jan/images/u_star.png" align=3D"absmiddle" width=
+=3D"12" alt=3D""></a></td>
+<td align=3D"left"><a href=3D"https://www.ambitionbox.com/reviews/zeronorth=
+-reviews?utm_campaign=3Dcja_mailer&amp;utm_source=3Dnaukri&amp;utm_medium=
+=3Demail&amp;utm_content=3Djob_alerts_cja&amp;utm_term=3D20260927920" style=
+=3D"text-decoration:none;font-family:'Inter',Arial,Helvetica,sans-serif;fon=
+t-size:11px;line-height:19px;text-align:left;color:#8292b4;font-weight:400"=
+>
+3.7
+</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"left"><table cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td width=3D"16" valign=3D"middle" align=3D"left"> <img src=3D"https://www.=
+ieplads.com/mailers/2022_ui/naukri/revival-6dec/images/location-icon.png" a=
+lign=3D"left" alt=3D"" width=3D"12"> </td>
+<td>
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" alig=
+n=3D"left">
+<tbody>
+<tr>
+<td class=3D"cart_subheading" style=3D"font-family:'Roboto',Arial,Helvetica=
+,sans-serif;font-size:13px;line-height:18px;text-align:left;color:#445578;f=
+ont-weight:400" valign=3D"middle" align=3D"left">Mumbai, Chennai</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"7"> </td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+<tr>
+<td valign=3D"top" height=3D"7"> </td>
+</tr>
+<tr>
+<td valign=3D"top">
+<table width=3D"100%" border=3D"0" align=3D"left" cellpadding=3D"0" cellspa=
+cing=3D"0">
+<tbody>
+<tr></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"7"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"18"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</a> </td>
+</tr>
+<tr>
+<td height=3D"20"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"center">
+<table width=3D"240" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" bgcol=
+or=3D"#457EFF" style=3D"border-radius:100px">
+<tbody>
+<tr>
+<td height=3D"40" width=3D"240" align=3D"center" valign=3D"middle"><a href=
+=3D"https://www.naukri.com/mnjuser/recommendedjobs?utm_campaign=3Dcja_maile=
+r&amp;utm_medium=3Demail&amp;utm_source=3Dviewalljobs&amp;utm_content=3Djob=
+_alerts_cja&amp;utm_term=3D20260927920" target=3D"_blank" style=3D"font-fam=
+ily:Inter,Arial,Helvetica,sans-serif;font-size:15px;font-weight:500;color:#=
+fff;text-decoration:none;display:block;line-height:40px">View All Recommend=
+ations</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" align=3D"center" height=3D"20"></td>
+</tr><tr> <td align=3D"center"> <table cellspacing=3D"0" cellpadding=3D"0" =
+align=3D"center"> <tbody> <tr> <td valign=3D"top" bgcolor=3D"#EDF4FF" align=
+=3D"center" width=3D"460"> <table width=3D"100%" cellspacing=3D"0" cellpadd=
+ing=3D"0" align=3D"center" bgcolor=3D"#F2FCFF"> <tbody> <tr> <td width=3D"4=
+%"></td><td valign=3D"top" align=3D"center"> <table style=3D"border-collaps=
+e:collapse;mso-table-lspace:0;mso-table-rspace:0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center"> <tbody> <tr> <td v=
+align=3D"top" height=3D"18"></td></tr><tr> <td valign=3D"top"> <table width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center"=
+> <tbody> <tr> <td valign=3D"top" align=3D"left"> <table width=3D"100%" cel=
+lspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left"> <tbody> <tr> =
+<td height=3D"8"></td></tr><tr> <td valign=3D"top" align=3D"left"> <table b=
+order=3D"0" align=3D"left" cellpadding=3D"0" cellspacing=3D"0"> <tbody> <tr=
+> <td width=3D"202" style=3D"font-family:'Roboto',Arial,Helvetica,sans-seri=
+f;font-size:15px;line-height:20px;text-align:left;color:#1b2437;font-weight=
+:700" valign=3D"top" align=3D"left"> Applies are a click away on the Naukri=
+ app </td></tr></tbody> </table> </td></tr><tr> <td height=3D"6"></td></tr>=
+<tr> <td align=3D"left"> <table style=3D"border-collapse:collapse;mso-table=
+-lspace:0;mso-table-rspace:0" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" align=3D"left"> <tbody> <tr> <td height=3D"18" align=3D=
+"left"> <table style=3D"border-collapse:collapse;mso-table-lspace:0;mso-tab=
+le-rspace:0" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left=
+"> <tbody> <tr> <td style=3D"font-family:'Roboto',Arial,Helvetica,sans-seri=
+f;font-size:13px;text-align:left;color:#445578;vertical-align:middle;font-w=
+eight:400" valign=3D"middle" align=3D"left"> Available on </td><td width=3D=
+"10"> </td><td align=3D"left"> <a data-label=3D"get-app" href=3D"https://cm=
+.naukri.com?data=3D%7B%22widgetSequence%22%3A1%2C%22deviceType%22%3A%22WEB%=
+22%2C%22eventId%22%3A%226ab911321e5a71ce4de2cbd0gxzzqv%22%2C%22systemId%22%=
+3A%22ni%22%2C%22widgetName%22%3A%22install-app-qr-mail-parent-wdgt%22%2C%22=
+widgetVersion%22%3A%22v0%22%2C%22label%22%3A%22get-app%22%2C%22otherFields%=
+22%3A%7B%22childPage%22%3A%22ni-mail-ja-bpo-v0%22%7D%2C%22userId%22%3A%2229=
+3827342%22%2C%22pageName%22%3A%22ni-mail-ja-v1%22%2C%22sectionName%22%3A%22=
+install-app%22%2C%22actionType%22%3A%22click%22%2C%22encUsername%22%3A%2252=
+c639b936f581699d0492e879dba5ff115e5e55e4c115d5d2cacb12860ec09292d2d6ac5f21f=
+68f%22%2C%22mailerId%22%3A%2220260927920%22%2C%22appId%22%3A%22127%22%2C%22=
+tenantId%22%3A1%2C%22eventName%22%3A%22nonSessionizedWidgetClick%22%2C%22wi=
+dgetNameString%22%3A%22install-app-qr-mail-parent-wdgt%22%2C%22lang%22%3A%2=
+2en%22%2C%22actionSrc%22%3A%22inventorySystem%22%7D&amp;redirect=3Dhttps%3A=
+%2F%2Fwww.naukri.com%2Fdurl%2FnEZb" target=3D"_blank"> <img src=3D"https://=
+www.ieplads.com/mailers/2022/naukri/23may/images/playstore-icon.png" style=
+=3D"text-decoration:none;color:#429ffc" width=3D"39" border=3D"0" align=3D"=
+absmiddle"></a> </td></tr></tbody> </table> </td></tr><tr> <td height=3D"15=
+"> </td></tr><tr> <td align=3D"left"> <table style=3D"border-collapse:colla=
+pse;mso-table-lspace:0;mso-table-rspace:0;border-radius:50px" width=3D"81" =
+cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#FF7555" align=3D"left"> <tb=
+ody> <tr> <td width=3D"5"> </td><td style=3D"color:#fff;text-decoration:non=
+e" height=3D"32" align=3D"center"> <a data-label=3D"get-app" href=3D"https:=
+//cm.naukri.com?data=3D%7B%22widgetSequence%22%3A1%2C%22deviceType%22%3A%22=
+WEB%22%2C%22eventId%22%3A%226ab911321e5a71ce4de2cbd0gxzzqv%22%2C%22systemId=
+%22%3A%22ni%22%2C%22widgetName%22%3A%22install-app-qr-mail-parent-wdgt%22%2=
+C%22widgetVersion%22%3A%22v0%22%2C%22label%22%3A%22get-app%22%2C%22otherFie=
+lds%22%3A%7B%22childPage%22%3A%22ni-mail-ja-bpo-v0%22%7D%2C%22userId%22%3A%=
+22293827342%22%2C%22pageName%22%3A%22ni-mail-ja-v1%22%2C%22sectionName%22%3=
+A%22install-app%22%2C%22actionType%22%3A%22click%22%2C%22encUsername%22%3A%=
+2252c639b936f581699d0492e879dba5ff115e5e55e4c115d5d2cacb12860ec09292d2d6ac5=
+f21f68f%22%2C%22mailerId%22%3A%2220260927920%22%2C%22appId%22%3A%22127%22%2=
+C%22tenantId%22%3A1%2C%22eventName%22%3A%22nonSessionizedWidgetClick%22%2C%=
+22widgetNameString%22%3A%22install-app-qr-mail-parent-wdgt%22%2C%22lang%22%=
+3A%22en%22%2C%22actionSrc%22%3A%22inventorySystem%22%7D&amp;redirect=3Dhttp=
+s%3A%2F%2Fwww.naukri.com%2Fdurl%2FnEZb" target=3D"_blank" style=3D"font-fam=
+ily:'Roboto',Arial,Helvetica,sans-serif;text-decoration:none;font-size:13px=
+;display:block;text-align:center;color:#fff;font-weight:700;line-height:32p=
+x">Get App</a> </td><td width=3D"5"> </td></tr></tbody> </table> </td></tr>=
+</tbody> </table> </td></tr></tbody> </table> </td><td valign=3D"top" align=
+=3D"right"> <table width=3D"95" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" align=3D"right"> <tbody> <tr> <td height=3D"3"></td></tr><tr> <td al=
+ign=3D"center"> <table style=3D"border:1px solid #c3f0ff;border-radius:6px"=
+ width=3D"94" height=3D"94" cellspacing=3D"0" cellpadding=3D"0" border=3D"0=
+" bgcolor=3D"#FFFFFF" align=3D"center"> <tbody> <tr> <td height=3D"1"></td>=
+</tr><tr> <td align=3D"center"> <img src=3D"https://www.ieplads.com/mailers=
+/2025_ui/naukri/naukri-qr-code/qr3.png" width=3D"78" height=3D"78"> </td></=
+tr></tbody> </table> </td></tr><tr> <td height=3D"4" bgcolor=3D"#F2FCFF"> <=
+/td></tr><tr> <td style=3D"font-family:'Roboto',Arial,Helvetica,sans-serif;=
+font-size:11px;line-height:20px;text-align:center;color:#8292b4" valign=3D"=
+top" bgcolor=3D"#F2FCFF" align=3D"center">Scan to download </td></tr></tbod=
+y> </table> </td></tr></tbody> </table> </td></tr><tr> <td valign=3D"top" h=
+eight=3D"20"></td></tr></tbody> </table> </td><td width=3D"4%"></td></tr></=
+tbody> </table> </td></tr></tbody> </table> </td></tr><tr>
+<td height=3D"16"></td>
+</tr>
+<tr>
+<td align=3D"center">
+<table cellspacing=3D"0" cellpadding=3D"0" align=3D"center">
+<tbody>
+<tr>
+<td align=3D"center" width=3D"18"> <a href=3D"https://www.facebook.com/Nauk=
+ri/?utm_campaign=3Dcja_mailer&amp;utm_medium=3Demail&amp;utm_content=3Djob_=
+alerts_cja&amp;utm_term=3D20260927920" style=3D"text-decoration:none;color:=
+#4b69b0" target=3D"_blank"> <img src=3D"https://www.ieplads.com/mailers/202=
+1/naukri/call-intent-mailer/images/fb.png" width=3D"21" alt=3D"Facebook" st=
+yle=3D"font-family:'Roboto',Arial;font-weight:400;text-align:center;font-si=
+ze:11px;color:#4b69b0;line-height:13px"></a> </td>
+<td width=3D"6"> </td>
+<td align=3D"center" width=3D"18"> <a href=3D"https://twitter.com/naukri?la=
+ng=3Den&amp;utm_campaign=3Dcja_mailer&amp;utm_medium=3Demail&amp;utm_conten=
+t=3Djob_alerts_cja&amp;utm_term=3D20260927920" style=3D"text-decoration:non=
+e;color:#37b1e1" target=3D"_blank"> <img src=3D"https://www.ieplads.com/mai=
+lers/2021/naukri/call-intent-mailer/images/linkedin.png" width=3D"21" alt=
+=3D"Twitter" style=3D"font-family:'Roboto',Arial;font-weight:400;text-align=
+:center;font-size:11px;color:#37b1e1;line-height:13px"></a> </td>
+<td width=3D"6"> </td>
+<td align=3D"center" width=3D"18"> <a href=3D"https://instagram.com/naukrid=
+otcom?utm_campaign=3Dcja_mailer&amp;utm_medium=3Demail&amp;utm_content=3Djo=
+b_alerts_cja&amp;utm_term=3D20260927920" style=3D"text-decoration:none;colo=
+r:#7a4b9a" target=3D"_blank"> <img src=3D"https://www.ieplads.com/mailers/2=
+021/naukri/call-intent-mailer/images/insta.png" width=3D"21" alt=3D"Instagr=
+am" style=3D"font-family:'Roboto',Arial;font-weight:400;text-align:center;f=
+ont-size:11px;color:#7a4b9a;line-height:13px"></a> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"center" valign=3D"top">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0" widt=
+h=3D"92%">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0" widt=
+h=3D"95%">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0" widt=
+h=3D"100%">
+<tbody>
+<tr>
+<td height=3D"13"> </td>
+</tr>
+<tr>
+<td align=3D"center" valign=3D"top">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"font-family:'Roboto',Arial;text-align:center;=
+font-size:11px;line-height:11px;color:#4a90e2" valign=3D"top"> <span style=
+=3D"color:#4c91e2"> <a href=3D"https://www.naukri.com/mnjuser/settings/comm=
+unication?mail_cat=3DUP&amp;mail_type=3Dncja&amp;mailer_id=3D20260927920&am=
+p;utm_campaign=3Dcja_mailer&amp;utm_medium=3Demail&amp;utm_source=3Dunsubsc=
+ribe&amp;utm_content=3Djob_alerts_cja&amp;utm_term=3D20260927920" style=3D"=
+color:#4c91e2;text-decoration:none" target=3D"_blank"> Unsubscribe </a> </s=
+pan> </td>
+<td width=3D"12"> </td>
+<td height=3D"12" style=3D"border-left:1px solid #5d5d5d" width=3D"12"> </t=
+d>
+<td width=3D"4"> </td>
+<td align=3D"left" style=3D"font-family:'Roboto',Arial;text-align:left;font=
+-size:11px;line-height:11px;color:#4a90e2" valign=3D"top"> <span style=3D"c=
+olor:#4c91e2"> <a href=3D"http://w5.naukri.com/fdbck/main/feedback.php?app_=
+id=3D15&amp;utm_campaign=3Dcja_mailer&amp;utm_medium=3Demail&amp;utm_conten=
+t=3Djob_alerts_cja&amp;utm_term=3D20260927920" style=3D"color:#4c91e2;text-=
+decoration:none" target=3D"_blank"> Report a Problem </a> </span> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"20"> </td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"font-family:'Roboto',Arial;font-weight:400;te=
+xt-align:center;font-size:10px;color:#999;line-height:13px;letter-spacing:.=
+21px" valign=3D"top"> You have received this mail because your e-mail ID is=
+ registered with Naukri.com. This is a system-generated e-mail regarding yo=
+ur Naukri account preferences, please don't reply to this message. The jobs=
+ sent in this mail have been posted by the clients of Naukri.com. And we ha=
+ve enabled auto-login for your convenience, you are strongly advised not to=
+ forward this email to protect your account from unauthorized access. IEIL =
+has taken all reasonable steps to ensure that the information in this maile=
+r is authentic. Users are advised to research bonafides of advertisers inde=
+pendently. Please do not pay any money to anyone who promises to find you a=
+ job. IEIL shall not have any responsibility in this regard. We recommend t=
+hat you visit our <span style=3D"color:#4c91e2"> <a href=3D"https://www.nau=
+kri.com/mynaukri/mn_termsconditions.php?utm_campaign=3Dcja_mailer&amp;utm_m=
+edium=3Demail&amp;utm_content=3Djob_alerts_cja&amp;utm_term=3D20260927920" =
+style=3D"color:#4c91e2;text-decoration:none" target=3D"_blank"> Terms &amp;=
+ Conditions </a> </span> and the <span style=3D"color:#4c91e2"> <a href=3D"=
+https://company.naukri.com/landing-page/fakejobtrend/new/index.html?utm_sou=
+rce=3Dsecurityadvice&amp;utm_medium=3Demail&amp;utm_campaign=3Dcja_mailer&a=
+mp;utm_content=3Djob_alerts_cja&amp;utm_term=3D20260927920" style=3D"color:=
+#4c91e2;text-decoration:none" target=3D"_blank"> Security Advice </a> </spa=
+n> for more comprehensive information. </td>
+</tr>
+<tr>
+<td height=3D"30"> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table><table align=3D"CENTER"><tbody><tr><td align=3D"CENTER"><div align=
+=3D"CENTER">Don't want to receive these mails? <a href=3D"http://communicat=
+ion.naukri.com/unsubscribe/?data=3D8e2202bf55ae1f5d5180002da3a6d036d6a950c7=
+36e3b1d9fddbafe07ad8c579911aaac16055de346fba344879524d869897a8adcb0c0410c7c=
+f3527d5426acb0a4ed31f7d73f64301ea6c8267f03f73b5b730381b265f8d47b92854d3b861=
+d2e9f09742e8c1ffbb41f2336d6f804bc3a2be66b10e5a3930c24a6796bb66b994f03278723=
+2a54bff8027a5eaaad860c3a6b63ba5750af8d2f68ad76a87f798b76e707528349f88ccdddc=
+cc3a7930d04a98b1d89ae3f5ac899a86cc384cde9c374846993bbf851fc6&amp;utm_campai=
+gn=3Dcja_mailer&amp;utm_medium=3Demail&amp;utm_content=3Djob_alerts_cja&amp=
+;utm_term=3D20260927920" target=3D"_blank" title=3D"20260927920">Click here=
+</a> to unsubscribe.</div></td></tr></tbody></table>
+</td>
+</tr>
+</tbody>
+</table>
+
+</body></html>
+------=_Part_1230533_752348079.1790518207969--
+
+------=_Part_1230532_771716930.1790518207969--
